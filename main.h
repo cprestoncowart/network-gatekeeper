@@ -4,7 +4,7 @@
 #define CHAR_BUFFER_LEN 256
 
 #define LINK_INTERFACES_NUMBER 2
-#define NETWORK_INTERFACES_NUMBER 2
+#define NETWORK_INTERFACES_NUMBER 3
 #define PAYMENT_INTERFACES_NUMBER 3
 
 #define DEFAULT 0
@@ -39,7 +39,8 @@ struct route_info
 };
 
 typedef struct S_ACCOUNT {
-  char account_id[35];
+  char account_id[20];
+  char contract_id[20];
   int64_t balance;
 } T_ACCOUNT;
 

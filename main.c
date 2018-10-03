@@ -15,6 +15,7 @@
 #include "network_ipv4.c"
 #include "payment_simulate.c"
 #include "payment_bitcoin.c"
+#include "payment_ethereum.c"
 #include "contract.c"
 
 T_CONFIG config;
@@ -207,6 +208,7 @@ int start(bool verbose)
   network_interfaces[NETWORK_INTERFACE_IPV4_IDENTIFIER] = network_ipv4_interface();
   payment_interfaces[PAYMENT_INTERFACE_SIMULATE_IDENTIFIER] = payment_simulate_interface();
   payment_interfaces[PAYMENT_INTERFACE_BITCOIN_IDENTIFIER] = payment_bitcoin_interface();
+  payment_interfaces[PAYMENT_INTERFACE_ETHEREUM_IDENTIFIER] = payment_ethereum_interface();
 
   //Read config file
   config = read_config();
